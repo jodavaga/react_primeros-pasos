@@ -8,12 +8,12 @@ import PrimeraApp, { Respuesta } from './PrimeraApp';
 
 // const hola = <PrimeraApp />;
 
-const saludo = (
+const saludoPadre = (
     // like Fragment
     <>
-        <PrimeraApp />
-        <Respuesta />
+        <PrimeraApp saludo="Hola soy una prop"/>
+        <Respuesta respuesta="que tal..respuesta como prop"/>
     </>
 )
 
-ReactDOM.render(saludo, document.querySelector('#root'));
+ReactDOM.render(saludoPadre, document.querySelector('#root'));

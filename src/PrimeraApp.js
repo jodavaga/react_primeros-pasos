@@ -2,22 +2,25 @@ import React from 'react';
 
 // Functional component
 
-const PrimeraApp = () => {
+const PrimeraApp = ({saludo = 'Hola mundo'}) => {
     
     // const saludo = 'Hola mundo desde const';
-    const saludo = {
+    const obj = {
         nombre: 'Jose',
         edad: 30
     };
 
     return(
-        <h1>{ JSON.stringify(saludo, null, 3) }</h1>
+        <>
+            <pre>{ JSON.stringify(obj, null, 3) }</pre>
+            <h2>{ saludo }</h2>
+        </>    
     )
 }
 
-const Respuesta = () => {
+const Respuesta = ({ respuesta }) => {
     return(
-        <h2>Que tal..</h2>
+        <h3>{ respuesta }</h3>
     )
 }
 
