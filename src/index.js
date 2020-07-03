@@ -1,6 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const hola = <h1>Hola mundo</h1>;
+import './index.css';
 
-ReactDOM.render(hola, document.querySelector('#root'));
+import PrimeraApp, { Respuesta } from './PrimeraApp';
+
+// const hola = <PrimeraApp />;
+
+const saludo = (
+    <div>
+        <PrimeraApp />
+        <Respuesta />
+    </div>
+)
+
+ReactDOM.render(saludo, document.querySelector('#root'));
