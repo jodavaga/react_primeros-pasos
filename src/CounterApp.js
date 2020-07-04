@@ -1,26 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const CounterApp = ({value}) => {
 
-    // click event
-    const handleAdd = (event) => {
-        event.persist();
-        
-        console.log(event);
-        const evetType = event.type;
+    const [counter, setCounter] = useState(value);
 
-        // Event Pooling - https://es.reactjs.org/docs/events.html#event-pooling
-        setTimeout(() => {
-            console.warn(evetType);
-            console.log(event);
-        }, 1000);
+    // click event
+    const handleAdd = () => {
+        setCounter(counter + 1);
     }
 
     return (
         <>
             <h1>Counter App</h1>
-            <h4> {value} </h4>
+            <h4> {counter} </h4>
 
             {/* <button onClick={ (e) => handleAdd(e) }> +1 </button> */}
             <button onClick={ handleAdd }> +1 </button>

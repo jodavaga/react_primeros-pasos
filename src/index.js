@@ -8,4 +8,4 @@ import './index.css';
 import CounterApp from './CounterApp';
 
 
-ReactDOM.render(<CounterApp value={123}/>, document.querySelector('#root'));
+ReactDOM.render(<CounterApp value={10}/>, document.querySelector('#root'));
