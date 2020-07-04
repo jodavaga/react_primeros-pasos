@@ -1,30 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Functional component
 
-const PrimeraApp = ({saludo = 'Hola mundo'}) => {
-    
-    // const saludo = 'Hola mundo desde const';
-    const obj = {
-        nombre: 'Jose',
-        edad: 30
-    };
+const PrimeraApp = ({ saludo }) => {
+
+    // if (!saludo) {
+    //     throw new Error('Saludo es necesario');
+    // }
+
 
     return(
         <>
-            <pre>{ JSON.stringify(obj, null, 3) }</pre>
-            <h2>{ saludo }</h2>
+            <h1>{ saludo }</h1>
+            <small> Mi primera aplicacion</small>
         </>    
     )
 }
 
-const Respuesta = ({ respuesta }) => {
-    return(
-        <h3>{ respuesta }</h3>
-    )
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
 }
 
 export {
-    PrimeraApp as default,
-    Respuesta
+    PrimeraApp as default
 }
