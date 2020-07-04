@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 
 // Functional component
 
-const PrimeraApp = ({ saludo }) => {
-
-    // if (!saludo) {
-    //     throw new Error('Saludo es necesario');
-    // }
-
+const PrimeraApp = ({ saludo, subtitulo }) => {
 
     return(
         <>
-            <h1>{ saludo }</h1>
-            <small> Mi primera aplicacion</small>
+            <h1> { saludo } </h1>
+            <small> {subtitulo } </small>
         </>    
     )
 }
 
 PrimeraApp.propTypes = {
-    saludo: PropTypes.string.isRequired
+    saludo: PropTypes.string.isRequired,
+    subtitulo: PropTypes.string
+}
+
+PrimeraApp.defaultProps = {
+    subtitulo: 'Subtitulo by default prop'
 }
 
 export {
