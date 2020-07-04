@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 const CounterApp = ({value}) => {
 
+<<<<<<< HEAD
     const [counter, setCounter] = useState(10);
+=======
+    const [counter, setCounter] = useState(value);
+>>>>>>> 0025e75... create and set counter state using hooks
 
     // click event
     const handleAdd = () => {
