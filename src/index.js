@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 
-import PrimeraApp from './PrimeraApp';
+// import PrimeraApp from './PrimeraApp';
+import CounterApp from './CounterApp';
 
 
-ReactDOM.render(<PrimeraApp saludo="Hola mundo" />, document.querySelector('#root'));
+ReactDOM.render(<CounterApp value={123}/>, document.querySelector('#root'));
