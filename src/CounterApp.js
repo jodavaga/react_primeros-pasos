@@ -3,15 +3,19 @@ import PropTypes from 'prop-types';
 
 const CounterApp = ({value}) => {
 
-<<<<<<< HEAD
-    const [counter, setCounter] = useState(10);
-=======
     const [counter, setCounter] = useState(value);
->>>>>>> 0025e75... create and set counter state using hooks
 
     // click event
     const handleAdd = () => {
         setCounter(counter + 1);
+    }
+
+    const resetCounter = () => {
+        setCounter(value);
+    }
+
+    const handleSubstract = () => {
+        setCounter(counter - 1);
     }
 
     return (
@@ -21,6 +25,12 @@ const CounterApp = ({value}) => {
 
             {/* <button onClick={ (e) => handleAdd(e) }> +1 </button> */}
             <button onClick={ handleAdd }> +1 </button>
+            {/* <button onClick={ () => setCounter(value) }> Reset </button>
+            <button onClick={ () => setCounter(counter - 1) }> -1 </button> */}
+
+            <button onClick={ resetCounter }> Reset </button>
+            <button onClick={ handleSubstract }> -1 </button>
+
         </>
     )
 }
