@@ -21,5 +21,23 @@ describe('Primera App tests', () => {
 
         expect( wrapper ).toMatchSnapshot();
     });
+
+    test('Should display subtitle sent by props', () => {
+        
+        const mensaje = 'Hola, soy jose';
+        const subtitle = 'Subtitulo sent by props';
+        const wrapper = shallow( 
+            <PrimeraApp 
+                saludo={mensaje} 
+                subtitulo={ subtitle }
+            /> 
+        );
+
+        const textoParrafo = wrapper.find('small').text();
+        console.log(textoParrafo);
+
+        expect(textoParrafo).toBe(subtitle);
+        
+    });
     
 })

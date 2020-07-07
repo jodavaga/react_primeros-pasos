@@ -3,14 +3,10 @@
 exports[`Primera App tests Should render <PrimeraApp /> correctly 1`] = `
 <Fragment>
   <h1>
-     
     Hola, soy jose
-     
   </h1>
   <small>
-     
     Subtitulo by default prop
-     
   </small>
 </Fragment>
 `;
