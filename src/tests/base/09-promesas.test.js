@@ -7,11 +7,21 @@ describe('Pruebas en 09-Promesas', () => {
 
         const id = 1;
         const heroeData = getHeroesById(id);
-        const heroe = getHeroesByIdAsync(id);
-        done();
+        getHeroesByIdAsync(id)
+            .then(heroe => {
+                expect(heroe).toEqual(heroeData);
+                done();  
+            });
+    });
 
-        expect(heroe).toEqual(heroeData);
+    test('Should return error if does not exist', (done) => {
 
-
-    })
+        const id = 10;
+        const heroeData = getHeroesById(id);
+        getHeroesByIdAsync(id)
+            .catch(err => {
+                expect(err).toBe('Heroe no encontrado');
+                done();  
+            });
+    });
 })

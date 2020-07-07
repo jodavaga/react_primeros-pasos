@@ -1,4 +1,4 @@
-import { getHeroesById } from './base/08-import-export';
+import { getHeroesById } from './08-import-export';
 
 export const getHeroesByIdAsync = (id) => {
     return new Promise((resolve, rejected) => {
@@ -7,6 +7,6 @@ export const getHeroesByIdAsync = (id) => {
             const heroe = getHeroesById(id);
             heroe ? resolve(heroe) : rejected('Heroe no encontrado');
             // resolve(heroe);
-        }, 2000);
+        }, 1500);
     });
 }
