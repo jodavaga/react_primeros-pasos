@@ -24,12 +24,12 @@ const CounterApp = ({value = 10}) => {
             <h4>{counter}</h4>
 
             {/* <button onClick={ (e) => handleAdd(e) }> +1 </button> */}
-            <button onClick={ handleAdd }> +1 </button>
+            <button className="addBtn" onClick={ handleAdd }> +1 </button>
             {/* <button onClick={ () => setCounter(value) }> Reset </button>
             <button onClick={ () => setCounter(counter - 1) }> -1 </button> */}
 
-            <button onClick={ resetCounter }> Reset </button>
-            <button onClick={ handleSubstract }> -1 </button>
+            <button className="resetBtn" onClick={ resetCounter }> Reset </button>
+            <button className="substractBtn" onClick={ handleSubstract }> -1 </button>
 
         </>
     )
